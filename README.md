@@ -80,6 +80,7 @@ Additionally, this project uses:
 
 
 -NoSQL for database: Document-oriented MongoDB
+
 -This project has many endpoints for use, like:
 ```bash
 ### Patients
