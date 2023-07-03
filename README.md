@@ -133,18 +133,18 @@ Additionally, this project uses:
 ```
 > Note: Assigned consulting rooms can only be created if the consulting room is available and have a valid date (does not have a doctor assigned in the range of dates given in the json)
 A medical appointment can only be created if previously exist an assigned consulting room with the requested specialty , is available for medical appointments and has a valid date (does not have a previous medical appointment assigned on that range of dates)。
+<
 
 
 
+## See how it works
 
-### See how it works
 
-
-#####Patients
+### Patients
 ![Post and get Methods for patients](/assets/PostPatients.gif)
-#####Doctors
+### Doctors
 ![Post and get Methods for Doctors](/assets/PostDoctor.gif)
-#####Medical Appointments
+### Medical Appointments
 ![Post and get Methods for Medical appointments](/assets//PostMedicalAppointments.gif)
 
 
