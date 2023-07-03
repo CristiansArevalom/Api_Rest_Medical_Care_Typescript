@@ -33,7 +33,7 @@ You can clone this repo as starter project for your Express, MongoDB API server
 
 
 ```bash
- git clone https://github.com/norbeydanilo/basic_api_rest.git
+ git clone https://github.com/CristiansArevalom/Api_Rest_Medical_Care_Typescript
  cd basic_api_rest
 ```
 
