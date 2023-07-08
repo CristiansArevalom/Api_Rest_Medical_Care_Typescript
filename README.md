@@ -3,10 +3,12 @@
 
 Basic api rest for Medical appointments using Node.js,Typescript, Express.js, MongoDB including the main data models like doctors, patients and medical appointment between doctors and patients.
 
+This project was developed for the program "TODOS A LA U - Universidad DISTRITAL - BACKEND INTERMEDIO"
+
 You can clone this repo as starter project for your Express, MongoDB API server
 
 
-## Data Model
+## Data Model 🔍
     Data model based on a relational model and adapted to mongoDb.
         ![Relational Data Model](/assets/image.png)
 
@@ -68,7 +70,7 @@ Additionally, this project uses:
 **Follow the steps of the Steps presentation in the repository -**
 
 
-## Features and Functionalities
+## Features and Functionalities 🔥
 -Node, Express, MongoDB, and Mongoose as ODM for Rest API medical appointments
 
 
@@ -160,13 +162,16 @@ A medical appointment can only be created if previously exist an assigned consul
 
 
 - [Doctors](#doctors)
-     - [GET] /api/doctores
+    - [GET] /api/doctores
      ![Get Methods for Doctors](/assets/Doctors/GetDoctors.gif)
-     - [POST] /api/doctores
+
+    - [POST] /api/doctores
      ![Post Methods for Doctors](/assets/Doctors/PostDoctor.gif)
-     - [GET] /api/doctores/:id
+
+    - [GET] /api/doctores/:id
      ![Get Doctors by id](/assets/Doctors/GetDoctorById.gif)
-     - [GET] /api/doctores/especialidad/:NOMBRE_ESPECIALDIAD
+
+    - [GET] /api/doctores/especialidad/:NOMBRE_ESPECIALDIAD
      ![Get Doctors by Speciality](/assets/Doctors/GetDoctorBySpeciality.gif)
 
 
