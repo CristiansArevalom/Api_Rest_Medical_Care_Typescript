@@ -7,7 +7,7 @@ export const getConsultorios = async (req: Request, res: Response) => {
         const consultorio = await consultorioService.getConsultorios();
         res.json(consultorio)
     } catch (error) {
-        res.status(500).json({ message: '' + error });
+        res.status(400).json({ message: '' + error });
     }
 
 };
@@ -16,7 +16,7 @@ export const getConsultorioById = async (req: Request, res: Response) => {
         const consultorio = await consultorioService.getConsultorioById(req.params.id);
         res.json(consultorio)
     } catch (error) {
-        res.status(500).json({ message: '' + error });
+        res.status(400).json({ message: '' + error });
 
     }
 };
@@ -26,7 +26,7 @@ export const createConsultorio = async (req: Request, res: Response) => {
         const consultorio = await consultorioService.createConsultorio(req.body);
         res.json(consultorio)
     } catch (error) {
-        res.status(500).json({ message: 'Error al crear el consultorio' + error });
+        res.status(400).json({ message: 'Error al crear el consultorio' + error });
     }
 };
 export const updateConsultorio = async (req: Request, res: Response) => {
@@ -34,7 +34,7 @@ export const updateConsultorio = async (req: Request, res: Response) => {
         const consultorio = await consultorioService.updateConsultorio(req.params.id, req.body);
         res.json(consultorio)
     } catch (error) {
-        res.status(500).json({ message: "" + error });
+        res.status(400).json({ message: "" + error });
     }
 };
 export const deleteConsultorio = async (req: Request, res: Response) => {
@@ -43,7 +43,7 @@ export const deleteConsultorio = async (req: Request, res: Response) => {
         res.json({ message: 'Consultorio eliminado correctamente' })
 
     } catch (error) {
-        res.status(500).json({ message: 'Error al eliminar el Consultorio' + error });
+        res.status(400).json({ message: 'Error al eliminar el Consultorio' + error });
     }
 };
 export const getConsultoriosDisponibles = async (req: Request, res: Response) => {
@@ -54,7 +54,7 @@ export const getConsultoriosDisponibles = async (req: Request, res: Response) =>
         const consultorio = await consultorioService.getConsultoriosDisponibles(fechaInicio,fechaFin)
         res.json(consultorio)
     } catch (error) {
-        res.status(500).json({ message: "Error al buscar consultorios libres" + error });
+        res.status(400).json({ message: "Error al buscar consultorios libres" + error });
 
     }
 };

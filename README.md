@@ -3,10 +3,6 @@
 
 Basic api rest for Medical appointments using Node.js,Typescript, Express.js, MongoDB including the main data models like doctors, patients and medical appointment between doctors and patients.
 
-
-Author:Cristian Arevalo.
-
-
 You can clone this repo as starter project for your Express, MongoDB API server
 
 
@@ -33,8 +29,8 @@ You can clone this repo as starter project for your Express, MongoDB API server
 
 
 ```bash
- git clone https://github.com/norbeydanilo/basic_api_rest.git
- cd basic_api_rest
+ git clone https://github.com/CristiansArevalom/ApiRestMedicalCareTypescript.git
+ cd citas_medicas_bknd
 ```
 
 
@@ -81,71 +77,160 @@ Additionally, this project uses:
 
 -NoSQL for database: Document-oriented MongoDB
 
--This project has many endpoints for use, like:
-```bash
-### Patients
-[GET] /api/pacientes
-[POST] /api/pacientes
-[PUT] /api/pacientes/:id
-[GET] /api/pacientes/cedula/:cedula
-[GET] /api/pacientes/:id
-[DELETE] /api/pacientes/:id
+# Available Endpoints:
+- [Patients](#patients)
+    - [GET] /api/pacientes
+    - [POST] /api/pacientes
+    - [PUT] /api/pacientes/:id
+    - [GET] /api/pacientes/cedula/:cedula
+    - [GET] /api/pacientes/:id
+    - [DELETE] /api/pacientes/:id
 
 
-### Specialities
-[GET] /api/especialidades/nombre/:NOMBRE_ESPECIALDIAD
-[GET] /api/especialidades
-[GET] /api/especialidades/:id
+- [Specialities](#specialities)
+    - [GET] /api/especialidades/nombre/:NOMBRE_ESPECIALDIAD
+    - [GET] /api/especialidades
+    - [GET] /api/especialidades/:id
 
 
-### Doctors
-[GET] /api/doctores
-[POST] /api/doctores
-[GET] /api/doctores/:id
-[GET] /api/doctores/especialidad/:NOMBRE_ESPECIALDIAD
+- [Doctors](#doctors)
+     - [GET] /api/doctores
+     - [POST] /api/doctores
+     - [GET] /api/doctores/:id
+     - [GET] /api/doctores/especialidad/:NOMBRE_ESPECIALDIAD
 
 
-### Consulting room
-[GET] /api/consultorios
-[GET] /api/consultorios/:id
-[POST] /api/consultorios
-[PUT] /api/consultorios/:id
-[DELETE] /api/consultorios/:id
-[GET] /api/consultorios/reserva/fecha-inicio=DD-MM-YYY :HH:MM&fecha-fin=DD-MM-YYY :HH:MM
-//show Availables consulting rooms (consulting rooms without a doctor assigned)
+- [Consulting Room](#consulting-room)
+    - [GET] /api/consultorios
+    - [GET] /api/consultorios/:id
+    - [POST] /api/consultorios
+    - [PUT] /api/consultorios/:id
+    - [DELETE] /api/consultorios/:id
+    - [GET] /api/consultorios/reserva/fecha-inicio=DD-MM-YYY :HH:MM&fecha-fin=DD-MM-YYY :HH:MM
+    //show Availables consulting rooms (consulting rooms without a doctor assigned)
 
 
-##Assigned consulting rooms
-[GET] /api/consultorios-asignados
-[GET] /api/consultorios-asignados/:id
-[GET] /api/consultorios-asignados/consultorios/:id
-[GET] /api/consultorios-asignados/especialidad/:NOMBRE_ESPECIALIDAD
-[POST] /api/consultorios-asignados
+- [Assigned Consulting Rooms](#assigned-consulting-rooms)
+    - [GET] /api/consultorios-asignados
+    - [GET] /api/consultorios-asignados/:id
+    - [GET] /api/consultorios-asignados/consultorios/:id
+    - [GET] /api/consultorios-asignados/especialidad/:NOMBRE_ESPECIALIDAD
+    - [POST] /api/consultorios-asignados
 
+- [Medical Appointments](#medical-appointments)
+    - [GET] /api/citas-medicas
+    - [GET] /api/citas-medicas/consultorio-asignado/:id
+    - [GET] /api/citas-medicas/paciente/:id
+    - [GET] /api/citas-medicas/doctor/:id
+    - [GET] /api/citas-medicas/especialidad/:id
+    - [POST] /api/citas-medicas
 
-##Medical appointments
-[GET] /api/citas-medicas
-[GET] /api/citas-medicas/consultorio-asignado/:id
-[GET] /api/citas-medicas/paciente/:id
-[GET] /api/citas-medicas/doctor/:id
-[GET] /api/citas-medicas/especialidad/:id
-[POST] /api/citas-medicas
-```
 > Note: Assigned consulting rooms can only be created if the consulting room is available and have a valid date (does not have a doctor assigned in the range of dates given in the json)
 A medical appointment can only be created if previously exist an assigned consulting room with the requested specialty , is available for medical appointments and has a valid date (does not have a previous medical appointment assigned on that range of dates)。
 
 
 
 
-### See how it works
+# See how it works
+
+- [Patients](#patients)
+    - [GET] /api/pacientes
+    ![Get Methods for patients](/assets/Patients/GetPatients.gif)
+    - [POST] /api/pacientes
+    ![Post Methods for patients](/assets/Patients/PostPatients.gif)
+    - [PUT] /api/pacientes/:id
+    ![Put Methods for patients](/assets/Patients/PutPatients.gif)
+    - [GET] /api/pacientes/cedula/:cedula
+    ![Get patients by cedula](/assets/Patients/GetPatientByCedula.gif)
+    - [GET] /api/pacientes/:id
+    ![Get patients by id](/assets/Patients/GetPatientsById.gif)
+    - [DELETE] /api/pacientes/:id
+    ![Delete patients](/assets/Patients/DeletePatients.gif)
+
+- [Specialities](#specialities)
+    - [GET] /api/especialidades/nombre/:NOMBRE_ESPECIALDIAD
+    ![Get Specialty by Name](/assets/Specialities/GetSpecialitiesByNombre.gif)
+    - [GET] /api/especialidades
+    ![Get Specialities](/assets/Specialities/GetSpecialities.gif)
+
+    - [GET] /api/especialidades/:id
+    ![Get Specialities by Id](/assets/Specialities/GetSpecialitiesById.gif)
 
 
-#####Patients
-![Post and get Methods for patients](/assets/PostPatients.gif)
-#####Doctors
-![Post and get Methods for Doctors](/assets/PostDoctor.gif)
-#####Medical Appointments
-![Post and get Methods for Medical appointments](/assets//PostMedicalAppointments.gif)
+
+- [Doctors](#doctors)
+     - [GET] /api/doctores
+     ![Get Methods for Doctors](/assets/Doctors/GetDoctors.gif)
+     - [POST] /api/doctores
+     ![Post Methods for Doctors](/assets/Doctors/PostDoctor.gif)
+     - [GET] /api/doctores/:id
+     ![Get Doctors by id](/assets/Doctors/GetDoctorById.gif)
+     - [GET] /api/doctores/especialidad/:NOMBRE_ESPECIALDIAD
+     ![Get Doctors by Speciality](/assets/Doctors/GetDoctorBySpeciality.gif)
+
+
+
+- [Consulting Room](#consulting-room)
+    - [GET] /api/consultorios
+    ![Get Consulting room](/assets/Consulting%20rooms/GetConsultingRooms.gif)
+
+    - [GET] /api/consultorios/:id
+    ![Get Consulting room by Id](/assets/Consulting%20rooms/GetConsultingRoomsById.gif)
+
+    - [POST] /api/consultorios
+    ![POST Consulting room](/assets/Consulting%20rooms/PostConsultingRooms.gif)
+
+    - [PUT] /api/consultorios/:id
+    ![PUT Consulting room](/assets/Consulting%20rooms/PutConsultingRooms.gif)
+
+    - [DELETE] /api/consultorios/:id
+    ![DELETE Consulting room](/assets/Consulting%20rooms/DeleteConsultingRoom.gif)
+
+    - [GET] /api/consultorios/reserva/fecha-inicio=DD-MM-YYY :HH:MM&fecha-fin=DD-MM-YYY :HH:MM
+    //show Availables consulting rooms (consulting rooms without a doctor assigned)
+    ![Get Consulting room without a doctor assigned](/assets/Consulting%20rooms/GetAvailableConsultingRooms.gif)
+
+
+
+- [Assigned Consulting Rooms](#assigned-consulting-rooms)
+    - [GET] /api/consultorios-asignados
+    ![Get Assigned Consulting room](/assets/AssignedConsultongRooms/getAssignedConsultingRooms.gif)
+    - [GET] /api/consultorios-asignados/:id
+    ![Get Assigned Consulting room by room id](/assets/AssignedConsultongRooms/getAssignedConsultingRoomsById.gif)
+    - [GET] /api/consultorios-asignados/consultorios/:id
+        ![Get Assigned Consulting room by room id](/assets/AssignedConsultongRooms/getAssignedConsultingRoomsByIdRoom.gif)
+
+    - [GET] /api/consultorios-asignados/especialidad/NOMBRE_ESPECIALIDAD
+    ![Get Assigned Consulting room by speciality name](/assets/AssignedConsultongRooms/getAssignedConsultingRoomsBySpeciality.gif)
+
+    - [POST] /api/consultorios-asignados
+    ![POST Assigned Consulting room](/assets/AssignedConsultongRooms/PostAssignedConsultingRooms.gif)
+
+- [Medical Appointments](#medical-appointments)
+    - [GET] /api/citas-medicas
+    ![Get Medical appointments](/assets/Medical%20appointments/getMedicalAppointments.gif)
+
+    - [GET] /api/citas-medicas/consultorio-asignado/:id
+    ![Get Medical appointments by Asignned roomid](/assets/Medical%20appointments/GetMedicalAppointmentByAssignedRoom.gif)
+
+
+    - [GET] /api/citas-medicas/paciente/:id
+    ![Get Medical appointments by patient id](/assets/Medical%20appointments/getMedicalAppointmentsByPatientId.gif)
+
+    - [GET] /api/citas-medicas/doctor/:id
+    ![Get Medical appointments by doctor id](/assets/Medical%20appointments/getMedicalAppointmentsByDoctorId.gif)
+
+    - [GET] /api/citas-medicas/especialidad/:id
+    ![Get Medical appointments by Specialty](/assets/Medical%20appointments/getMedicalAppointmentsBySpeciality.gif)
+
+    - [POST] /api/citas-medicas
+    ![POST Medical appointments](/assets/Medical%20appointments/PostMedicalAppointments.gif)
+
+# Authors
+- [@CristiansArevalom](https://github.com/CristiansArevalom)
+
+
+
 
 
 
