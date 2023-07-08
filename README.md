@@ -196,7 +196,7 @@ A medical appointment can only be created if previously exist an assigned consul
 
     - [GET] /api/consultorios/reserva/fecha-inicio=DD-MM-YYY :HH:MM&fecha-fin=DD-MM-YYY :HH:MM
     //show Availables consulting rooms (consulting rooms without a doctor assigned)
-    ![Get Consulting room without a doctor assigned](/assets/Consulting%20rooms/GetAvailableConsultingRooms.gif)
+    ![Get Consulting room without a doctor assigned](/assets/Consulting%20rooms/getAvailableConsultingRooms.gif)
 
 
 
