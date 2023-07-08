@@ -164,7 +164,7 @@ A medical appointment can only be created if previously exist an assigned consul
 - [Doctors](#doctors)
     - [GET] /api/doctores
 
-     ![Get Methods for Doctors](/assets/Doctors/getDoctors.gif)
+     ![Get Methods for Doctor](/assets/Doctors/getDoctors.gif)
 
     - [POST] /api/doctores
 
